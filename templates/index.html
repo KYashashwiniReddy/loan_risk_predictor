@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Approval Predictor</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="card">
+
+            <h1>🏦 Loan Approval Predictor</h1>
+
+            <div class="grid">
+
+                <div>
+                    <label>Age</label>
+                    <input id="Age" type="number">
+                </div>
+
+                <div>
+                    <label>Income</label>
+                    <input id="Income" type="number">
+                </div>
+
+                <div>
+                    <label>Loan Amount</label>
+                    <input id="LoanAmount" type="number">
+                </div>
+
+                <div>
+                    <label>Credit Score</label>
+                    <input id="CreditScore" type="number">
+                </div>
+
+                <div>
+                    <label>Months Employed</label>
+                    <input id="MonthsEmployed" type="number">
+                </div>
+
+                <div>
+                    <label>Number of Credit Lines</label>
+                    <input id="NumCreditLines" type="number">
+                </div>
+
+                <div>
+                    <label>Interest Rate (%)</label>
+                    <input id="InterestRate" type="number" step="0.01">
+                </div>
+
+                <div>
+                    <label>Loan Term</label>
+                    <input id="LoanTerm" type="number">
+                </div>
+
+                <div>
+                    <label>DTI Ratio</label>
+                    <input id="DTIRatio" type="number" step="0.01">
+                </div>
+
+                <div>
+                    <label>Education</label>
+                    <select id="Education">
+                        <option>Bachelor's</option>
+                        <option>Master's</option>
+                        <option>High School</option>
+                        <option>PhD</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label>Employment Type</label>
+                    <select id="EmploymentType">
+                        <option>Full-time</option>
+                        <option>Part-time</option>
+                        <option>Self-employed</option>
+                        <option>Unemployed</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label>Marital Status</label>
+                    <select id="MaritalStatus">
+                        <option>Single</option>
+                        <option>Married</option>
+                        <option>Divorced</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label>Has Mortgage?</label>
+                    <select id="HasMortgage">
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label>Has Dependents?</label>
+                    <select id="HasDependents">
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label>Loan Purpose</label>
+                    <select id="LoanPurpose">
+                        <option>Auto</option>
+                        <option>Business</option>
+                        <option>Education</option>
+                        <option>Home</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label>Has Co-Signer?</label>
+                    <select id="HasCoSigner">
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <button onclick="predictLoan()">
+                Predict Loan
+            </button>
+
+            <div id="result"></div>
+
+        </div>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
